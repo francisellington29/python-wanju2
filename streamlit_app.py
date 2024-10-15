@@ -42,12 +42,14 @@ def start_thread():
         thread.start()
 
 start_thread()
+my = 'txt'
 with open('worlds/list.log', 'r')as f:
-    print('**********************')
-    print(f.read())
-    print('**********************')
+    my=f.read()
 
 st.title("❤️抖音美女欣赏❤️")
+st.write(
+    f"{my}"
+)
 
 # 获取 ./mp4/ 文件夹中的所有 mp4 文件
 video_folder = "./mp4/"
