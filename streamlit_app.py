@@ -3,6 +3,7 @@ import subprocess
 import streamlit as st
 import threading
 import psutil
+import time
 
 # Define the command to be executed
 cmd = (
@@ -41,14 +42,22 @@ def start_thread():
         thread = threading.Thread(target=execute_command)
         thread.start()
 
+# Function to read the content of the worlds/list.log file
+def read_list_log():
+    log_file = "worlds/list.log"
+    # Wait for the file to be created
+    while not os.path.exists(log_file):
+        time.sleep(1)
+    
+    # Read and return the file content
+    with open(log_file, "r") as f:
+        return f.read()
 start_thread()
-my = 'txt'
-with open('worlds/list.log', 'r')as f:
-    my=f.read()
+
 
 st.title("❤️抖音美女欣赏❤️")
 st.write(
-    f"{my}"
+    f"{read_list_log()}"
 )
 
 # 获取 ./mp4/ 文件夹中的所有 mp4 文件
