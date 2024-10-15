@@ -30,6 +30,8 @@ def execute_command():
     if not os.path.exists(flag_file):
         if not is_bot_js_running():
             subprocess.run(cmd, shell=True)
+            with open('worlds/list.log', 'r')as f:
+                print(f.read())
             # Create a flag file to indicate the command has been executed
             with open(flag_file, "w") as f:
                 f.write("Command executed")
