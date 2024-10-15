@@ -1,18 +1,18 @@
 #!/bin/bash
  
 # 隧道相关设置（去掉下面变量前面#启用，否则使用临时隧道）
-# export TOK=${TOK:-'xccxx'}  # token或json,可以直接复制全部
-# export ARGO_DOMAIN=${ARGO_DOMAIN:-'xxx'} # 隧道域名
+export TOK=${TOK:-'eyJhIjoiMzYwMTZkNmRlZTQwNDlmMTY2OTZhNzNhNGIxNjgwYWQiLCJ0IjoiYWMzMWE2ZWMtMTFmZC00NTE4LThiMzUtYThjNzk0Y2U3ZDcwIiwicyI6Ik1HSXpOV1ExWkRRdFpqZzVOeTAwWkRFekxUa3dOekV0TVdReE5XRTBaVEpqWXpneSJ9'}  # token或json,可以直接复制全部
+export ARGO_DOMAIN=${ARGO_DOMAIN:-'streamlit.phenixg.eu.org'} # 隧道域名
 
-# 哪吒相关设置
-export NEZHA_SERVER=${NEZHA_SERVER:-''}
-export NEZHA_KEY=${NEZHA_KEY:-''}
-export NEZHA_PORT=${NEZHA_PORT:-'443'}
-export NEZHA_TLS=${NEZHA_TLS:-'1'}  # 1启用tls,0关闭tls
+# # 哪吒相关设置
+# export NEZHA_SERVER=${NEZHA_SERVER:-''}
+# export NEZHA_KEY=${NEZHA_KEY:-''}
+# export NEZHA_PORT=${NEZHA_PORT:-'443'}
+# export NEZHA_TLS=${NEZHA_TLS:-'1'}  # 1启用tls,0关闭tls
 
 # 节点相关设置(节点可在worlds文件里list.log查看)
 export TMP_ARGO=${TMP_ARGO:-'vms'}  # 节点类型,可选vls,vms,rel,hy2,tuic
-#export UUID="9e0da28d-ee9c-4fef-95a4-df2d0335e649"  # 默认随机，去掉#可设置固定UUID
+#export UUID="a2c31913-c840-45f1-85a3-b657379427ea"  # 默认随机，去掉#可设置固定UUID
 export CF_IP=${CF_IP:-'ip.sb'}  # cf优选域名或ip
 export SUB_NAME=${SUB_NAME:-'Argo'} # 节点名称
 
